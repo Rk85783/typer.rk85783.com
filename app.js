@@ -13,6 +13,7 @@ app.use(express.json());
 
 dbConnect();
 
+app.get("/", (req, res) => res.status(200).json({ message: "Ok", data: new Date() }));
 app.use("/api", router);
 app.use((req, res) => res.status(404).json({ success: false, message: "Route not found" }));
 app.use(errorHandler);
