@@ -1,8 +1,8 @@
 import "dotenv/config";
 import express from "express";
+import cors from "cors";
 import dbConnect from "./db.js";
 import router from "./routes/api.router.js";
-import cors from "cors";
 import errorHandler from "./error_handler.js";
 
 const app = express();
